@@ -1,0 +1,17 @@
+@import "common/colors";
+
+.container {
+  max-width: 100%;
+  height: 8px;
+
+  background: $color-bg-border;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__value {
+    max-width: 100%;
+    height: 100%;
+
+    background: $color-bg-soft;
+  }
+}

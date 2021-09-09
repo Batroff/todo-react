@@ -1,0 +1,113 @@
+@import "common/colors";
+
+.container {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+
+  grid-template-rows: auto;
+}
+
+.item {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: .75rem;
+
+  background: $gradient-main;
+  box-shadow: 0 3px 0 $gradient-main-shadow;
+  border-radius: 1rem;
+
+  &__title {
+    margin-bottom: .75rem;
+
+    font-size: 1.125rem;
+  }
+
+  // START INFO BLOCK
+
+  &__progress {
+    transition: opacity .3s ease;
+
+    &_complete {
+      text-transform: uppercase;
+      font-size: .8125rem;
+      margin-bottom: .25rem;
+    }
+
+    &_bar {
+    }
+  }
+
+  &[data-open="true"] &__info {
+    opacity: 0;
+  }
+
+  &[data-open="false"] &__info {
+    opacity: 1;
+  }
+
+  // END INFO BLOCK
+
+
+
+  // START LIST BLOCK
+
+  &[data-open="false"] &__list {
+    height: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+
+    transition: height 1s ease;
+    overflow: hidden;
+
+    &_child {
+      position: relative;
+      padding: 7px 10px;
+      overflow: hidden;
+      border-radius: 5px;
+
+      font-size: .875rem;
+      background: $color-bg-ghost;
+
+      transition: all .2s linear;
+    }
+
+    &_child[data-checked="false"] {
+      text-decoration-line: none;
+      color: $color-typo-primary;
+    }
+
+    &_child[data-checked="true"] {
+      text-decoration-line: line-through;
+      color: $color-typo-ghost;
+    }
+
+    // TODO: finish complete mark styling
+    &_child:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 6px;
+
+      transition: background .1s linear;
+    }
+
+    &_child[data-checked="false"]:after {
+      background: transparent;
+    }
+
+    &_child[data-checked="true"]:after {
+      background: #24C38E;
+    }
+  }
+
+  // END LIST BLOCK
+}

@@ -1,0 +1,17 @@
+@import "../../common/colors";
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+
+  background: $gradient-main;
+  box-sizing: 0 3px 0 $gradient-main;
+  border-radius: 15px;
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 1.125rem;
+  }
+}

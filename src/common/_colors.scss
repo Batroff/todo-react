@@ -1,0 +1,37 @@
+// Background colors
+
+$color-bg-default   : #22272B;  // Основной
+$color-bg-secondary : #161A1D;  // Дополнительный (второстепенный)
+
+$color-bg-success   : #24C38E;  // Успешное действие, статус
+$color-bg-caution   : #F2C94C;  // Для блоков, сообщающих об осторожном действии/статусе
+$color-bg-warning   : #F38B01;  // Для блоков, сообщающих об предупреждающем действии/статусе
+$color-bg-alert     : #FF4443;  // Компоненты с ошибкой
+$color-bg-critical  : #33000F;  // Для блоков, сообщающих об критичном действии/статусе
+
+$color-bg-tone      : rgba(12, 17, 19, 0.85);     // Цвет затемняющей подложки (оверлея) под всплывающими окнами
+$color-bg-border    : rgba(255, 255, 255, 0.2);   // Цвет большинства бордеров и тонких разделителей
+$color-bg-soft      : rgba(255, 255, 255, 0.9);   // Цвет высветляющей подложки (оверлея) под всплывающими окнами
+$color-bg-ghost     : rgba(246, 251, 253, 0.1);   // Для дополнительного выделения или разделения блоков или секций. Обычно используется поверх основных фонов (default или secondary).
+
+// End background colors
+
+
+// Typo colors
+
+$color-typo-primary    : #FAFAFA;                    // Основной текст
+$color-typo-secondary  : rgba(255, 255, 255, 0.6);   // Второстепенный текст
+$color-typo-ghost      : rgba(255, 255, 255, 0.3);   // Третьестепенный текст
+
+$color-typo-link       : #0F9FFF;                    // Ссылка
+$color-typo-link-hover : #6FA5C8;                    // При наведении на ссылку
+
+// End typo colors
+
+
+// Gradients
+
+$gradient-main        : linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+$gradient-main-shadow : rgba(255, 95, 109, 0.5)
+
+// End gradients
